@@ -5,7 +5,6 @@ const config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -43,16 +42,13 @@ const config = {
         },
         ring: "hsl(var(--ring))",
       },
+      fontFamily: {
+        sans: ["GeistSans", "sans-serif"],
+        caption: ["AnekTelugu", "sans-serif"],
+      },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
-  fontFamily: {
-    sans: ["GeistSans", "sans-serif"],
-    caption: ["AnekTelugu", "sans-serif"],
-  },
 };
 
 export default config;
