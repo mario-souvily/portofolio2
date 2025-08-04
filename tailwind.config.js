@@ -43,8 +43,9 @@ const config = {
         ring: "hsl(var(--ring))",
       },
       fontFamily: {
-        sans: ["GeistSans", "sans-serif"],
-        caption: ["AnekTelugu", "sans-serif"],
+        sans: ["var(--font-geist-sans)", "sans-serif"],
+        caption: ["var(--font-caption)", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "monospace"],
       },
     },
   },

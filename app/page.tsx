@@ -1,13 +1,12 @@
 import { Header } from "./components/header";
+import { Hero } from "./components/hero";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-center p-24">
-        <div className="text-center">
-          <p className="mt-4 text-foreground">Bienvenue sur mon portfolio !</p>
-        </div>
+      <main className="container mx-auto px-4 py-8">
+        <Hero />
       </main>
     </>
   );
