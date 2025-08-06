@@ -1,36 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
-
 export const Header = () => {
   return (
-    <header className="sticky top-0 ">
-      <section className="flex items-center justify-between p-4">
-        <h1 className="text-lg font-bold text-foreground text-primary">
+    <header className="sticky top-0 py-4 bg-background border-b border-border">
+      <div className="container mx-auto px-4 flex items-center justify-between">
+        <h1 className="text-lg font-bold text-primary">
           Portfolio de Mario Souvily-grieco
         </h1>
         <div className="flex items-center gap-4">
-
-          <Link className="size-6 p-0"
-            href="https://github.com/mario-souvily">
+          <Link
+            href="https://github.com/mario-souvily"
+            className="hover:opacity-80 transition-opacity">
             <Image
               src="/images/github.jpg"
               alt="GitHub Logo"
-              width={20}
-              height={20}
-              className="text-foreground"
+              width={24}
+              height={24}
+              className="rounded"
             />
           </Link>
-          <Link href="https://www.linkedin.com/in/mario-grieco-a510263b/">
-            <Image src="/images/linkedin.jpg"
+          <Link
+            href="https://www.linkedin.com/in/mario-grieco-a510263b/"
+            className="hover:opacity-80 transition-opacity">
+            <Image
+              src="/images/linkedin.jpg"
               alt="LinkedIn Logo"
-              width={20}
-              height={20} />
+              width={24}
+              height={24}
+              className="rounded"
+            />
           </Link>
-
         </div>
-      </section>
-    </header >
+      </div>
+    </header>
   );
 };
