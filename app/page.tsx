@@ -8,6 +8,7 @@ export default function Home() {
       <Header />
       <main className="container mx-auto px-4 py-8">
         <Hero />
+
         <Status />
       </main>
     </>

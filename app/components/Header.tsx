@@ -13,7 +13,7 @@ export const Header = () => {
             href="https://github.com/mario-souvily"
             className="hover:opacity-80 transition-opacity">
             <Image
-              src="/images/github.jpg"
+              src="/images/github-1.svg"
               alt="GitHub Logo"
               width={24}
               height={24}
@@ -24,7 +24,7 @@ export const Header = () => {
             href="https://www.linkedin.com/in/mario-grieco-a510263b/"
             className="hover:opacity-80 transition-opacity">
             <Image
-              src="/images/linkedin.jpg"
+              src="/images/linkedin.svg"
               alt="LinkedIn Logo"
               width={24}
               height={24}
