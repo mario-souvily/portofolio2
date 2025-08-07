@@ -27,6 +27,7 @@ export default function RootLayout({
           AnekTelugu.variable,
           "font-sans h-full bg-background text-foreground"
         )}
+        suppressHydrationWarning={true}
       >
         {children}
       </body>

@@ -1,11 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { Link, LucideIcon } from "lucide-react";
-import { Section } from "./Section";
 import Image from "next/image";
-
-
-
-
+import Link from "next/link";
+import { Section } from "./Section";
 
 export const Status = () => {
   return (
@@ -13,12 +9,20 @@ export const Status = () => {
       <div className="flex-[3] w-full">
         <Card className="w-full p-2 flex flex-col gap-2">
           <p className="text-lg text-muted-foreground">Mes-projets</p>
-          {SideProjects.map((project) => (
-            <SideProject key={project.title} {...project} />
-          ))}
+          <div className="flex flex-col gap-2">
+            {SideProjects.map((project, index) => (
+              <SideProject
+                key={index}
+                logo={project.logo}
+                title={project.title}
+                description={project.description}
+                url={project.url}
+              />
+            ))}
+          </div>
         </Card>
       </div>
-      <div className="flex-2 w-full flex flex-col h-full gap-4">
+      <div className="flex-[2] w-full flex flex-col gap-4">
         <Card className="p-2 flex-1">
           Work
         </Card>
@@ -29,45 +33,52 @@ export const Status = () => {
     </Section>
   );
 };
+
 const SideProjects = [
   {
-    logo: "",
-    title: "zombieland",
+    image: "",
+    title: "Zombieland",
     description: "Site réalisé en automomie pour le passage de mon diplôme de développeur web fullstack qui a pour thème les zombies",
-    link: "http://zombielandworld.surge.sh/"
+    url: "http://zombielandworld.surge.sh/"
   },
   {
-    logo: "",
+    image: "/images/Ocoffee.png",
     title: "O'coofee",
     description: "site réalisé a mis parcours durant ma formation ",
-    link: ""
+    url: ""
   },
   {
-    logo: "",
+    image: "",
     title: "Pokedex",
     description: "site réalisé a mis parcours durant ma formation en utilisant l'api de pokémon",
-    link: ""
+    url: ""
   },
-
-
 ];
 
-const SideProject = (props: {
+type SideProjectProps = {
+  logo: string;
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+};
 
-  logo: string,
-  title: string,
-  description: string,
-  link: string
-}) => {
+const SideProject = (props: SideProjectProps) => {
   return (
-    <Card className="w-full p-2 flex flex-col gap-2">
-      <div className="flex items-center gap-2">
-        <Image src={props.logo} alt={props.title} width={100} height={100} />
-        <p className="text-lg text-muted-foreground">{props.title}</p>
+    <Link
+      href={props.url}
+      className="inline-flex items-center gap-4 hover:bg-accent hover:text-accent p-2 rounded-md"
+    >
+      <span className="bg-accent text-accent-foreground">
+        {props.image && (
+          <Image src={props.image} alt={props.title} width={16} height={16} />
+        )}
+      </span>
+      <div>
+        <p className="text-lg font-semibold">{props.title}</p>
+        <p className="text-sm text-muted-foreground">{props.description}</p>
       </div>
-      <p className="text-sm text-muted-foreground">{props.description}</p>
-      <Link href={props.link} className="text-sm text-muted-foreground">Voir le projet</Link>
-    </Card>
+    </Link>
   );
 };
 
