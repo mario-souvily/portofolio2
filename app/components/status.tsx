@@ -7,7 +7,6 @@ export const Status = () => {
   return (
 
     <Section>
-
       <Card className=" p-2 flex flex-col gap-2 ">
         <p className="text-lg text-muted-foreground">Mes projets</p>
         <div className="flex flex-col gap-2">
@@ -23,7 +22,17 @@ export const Status = () => {
         </div>
       </Card>
       <Card className="p-2">
-        Mon travail
+        <p className="text-lg text-muted-foreground">Mon parcours</p>
+        <div className="flex flex-col gap-2">
+          {Parcours.map((parcours, index) => (
+            <Parcour
+              key={index}
+              title={parcours.title}
+              description={parcours.description}
+              image={parcours.image}
+            />
+          ))}
+        </div>
       </Card>
 
       <Card className="p-2">
@@ -64,6 +73,26 @@ type SideProjectProps = {
   image: string;
 };
 
+type ParcoursProps = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+
+const Parcours = [
+  {
+    title: "2024-2025",
+    description: "formation de développeur web fullstack",
+    image: "",
+  },
+  {
+    title: "2025-2026",
+    description: "formation de développeur web fullstack",
+    image: "",
+  },
+
+];
 
 
 const SideProject = (props: SideProjectProps) => {
@@ -83,6 +112,15 @@ const SideProject = (props: SideProjectProps) => {
         <p className="text-sm text-muted-foreground">{props.description}</p>
       </div>
     </Link>
+  );
+};
+
+const Parcour = (props: ParcoursProps) => {
+  return (
+    <div>
+      <p className="text-lg font-semibold">{props.title}</p>
+      <p className="text-sm text-muted-foreground">{props.description}</p>
+    </div>
   );
 };
 
