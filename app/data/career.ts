@@ -1,0 +1,27 @@
+export const Parcours = [
+  {
+    title: "Wiser Solution ",
+    description:
+      "Conception et implémentation d'une plateforme de benchmark produit ",
+    stack: "Next.js, React, Tailwind CSS, TypeScript, Prisma, MySQL",
+    role: "Stagiaire Développeur web fullstack",
+    image: "/images/wiser.jpg",
+    date: "2025-2025",
+  },
+  {
+    title: "O'clock Formation de développeur web fullstack",
+    description: "Formation au titre de développeur web fullstack",
+    stack:
+      "JavaScript, html, css, React, TypeScript, Express, Nodejs, PostgreSQL, Sequelize, Docker, Git, Github ",
+    role: "Apprenant",
+    image: "/images/oclock.jpg",
+    date: "2024-2025",
+  },
+  {
+    title: "Responsable de magasin et commercial",
+    description: "Pret à porter, Immobilier, Restauration, Magasins",
+    role: " Responsable",
+    image: "/images/responsable.png",
+    date: "2003-2024",
+  },
+];

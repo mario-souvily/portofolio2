@@ -20,7 +20,7 @@ export const Hero = () => {
       </div>
       <div className="flex-[2] flex justify-center md:justify-start">
         <img src="/images/image-moi.png"
-          className="w-full h-auto max-w-40 rounded-lg  md:mt-20"
+          className="w-full h-auto max-w-48 rounded-lg  md:mt-20"
           alt="Photo de Mario"
         />
       </div>
