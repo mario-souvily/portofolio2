@@ -32,6 +32,7 @@ export const Status = () => {
             image={parcours.image}
             date={parcours.date}
             role={parcours.role}
+            stack={parcours.stack}
           />
         ))}
       </div>
