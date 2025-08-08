@@ -1,5 +1,6 @@
 
 import { Contactme } from "./components/contact/contactme";
+import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { Hero } from "./components/hero";
 import { Status } from "./components/status";
@@ -13,6 +14,7 @@ export default function Home() {
         <Status />
         <Contactme />
       </main>
+      <Footer />
     </>
   );
 }
