@@ -31,6 +31,17 @@ export const Header = () => {
               className="rounded"
             />
           </Link>
+          <Link
+            href="mailto:mario.souvily@gmail.com"
+            className="hover:opacity-80 transition-opacity">
+            <Image
+              src="/images/email.png  "
+              alt="Email Logo"
+              width={24}
+              height={24}
+              className="rounded"
+            />
+          </Link>
         </div>
       </div>
     </header>

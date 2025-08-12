@@ -1,5 +1,4 @@
 
-import { Contactme } from "./components/contact/contactme";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { Hero } from "./components/hero";
@@ -12,7 +11,6 @@ export default function Home() {
       <main className="container mx-auto px-4 py-8">
         <Hero />
         <Status />
-        <Contactme />
       </main>
       <Footer />
     </>
