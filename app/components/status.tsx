@@ -3,7 +3,7 @@ import { SideProjects } from "@/app/data/projects";
 import { Stacks } from "@/app/data/stacks";
 import { Section } from "./Section";
 import { Parcour } from "./career/Parcour";
-import { Stack } from "./competance/stack";
+import { Stack } from "./competance/Stack";
 import { SideProject } from "./projects/SideProject";
 
 export const Status = () => {
