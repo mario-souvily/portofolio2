@@ -28,4 +28,8 @@ export const Stacks = [
     name: "PostgreSQL",
     image: "/images/postgresql2.svg",
   },
+  {
+    name: "Sequelize",
+    image: "/images/logo-sequelize.jpg",
+  },
 ];
