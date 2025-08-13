@@ -20,7 +20,7 @@ export const SideProject = (props: SideProjectProps) => {
       </span>
       <div>
         <p className="text-lg font-semibold">{props.title}</p>
-        <p className="text-md text-muted-foreground">{props.description}</p>
+        <p className="text-md text-muted-foreground ">{props.description}</p>
         {props.stacks && (
           <div className="text-md text-muted-foreground flex flex-wrap gap-1">
             {props.stacks.map((stack, index) => (

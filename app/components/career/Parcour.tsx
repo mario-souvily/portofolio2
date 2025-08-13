@@ -17,7 +17,7 @@ export const Parcour = (props: ParcoursProps) => {
       </span>
       <div className="flex flex-col gap-1">
         <p className="text-lg font-semibold mt-7">{props.title}</p>
-        <p className="text-sm text-muted-foreground flex flex-col gap-1">
+        <p className="text-md text-muted-foreground flex flex-col gap-1">
           <span>{props.description}</span>
           <span>{props.role}</span>
           <span>{props.date}</span>
