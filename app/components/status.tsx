@@ -31,6 +31,7 @@ export const Status = () => {
               description={project.description}
               url={project.url}
               image={project.image}
+              stacks={project.stacks}
             />
           ))}
         </div>
