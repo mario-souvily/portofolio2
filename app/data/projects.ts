@@ -1,6 +1,6 @@
 export const SideProjects = [
   {
-    image: "/images/Zombieland-1.png",
+    image: "/images/zombieland.png",
     title: "Zombieland",
     description:
       "Site réalisé en automomie pour le passage de mon diplôme de développeur web fullstack qui a pour thème les zombies.",
