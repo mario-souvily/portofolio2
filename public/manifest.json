@@ -1,0 +1,24 @@
+{
+  "name": "Portfolio Mario Souvily-grieco",
+  "short_name": "Portfolio Mario",
+  "description": "Portfolio de Mario Souvily-grieco, développeur web fullstack",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/image-moi.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/image-moi.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["technology", "business"],
+  "lang": "fr-FR"
+}
