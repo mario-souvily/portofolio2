@@ -6,7 +6,7 @@ export const Header = () => {
     <header className="sticky top-0 py-4 bg-background border-b border-border">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <h1 className="text-lg font-bold text-primary">
-          Portfolio de Mario Souvily-grieco
+          Portfolio de Mario Souvily-Grieco
         </h1>
         <div className="flex items-center gap-4">
           <Link
@@ -35,7 +35,7 @@ export const Header = () => {
             href="mailto:mario.souvily@gmail.com"
             className="hover:opacity-80 transition-opacity">
             <Image
-              src="/images/email.png  "
+              src="./images/email.png"
               alt="Email Logo"
               width={24}
               height={24}

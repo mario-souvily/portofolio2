@@ -20,12 +20,12 @@ export const Stacks = [
     image: "/images/express.jpg",
   },
   {
-    name: "typescript",
+    name: "TypeScript",
     image: "/images/typescript.svg",
   },
 
   {
-    name: "postgresSQL",
+    name: "PostgreSQL",
     image: "/images/postgresql2.svg",
   },
 ];
