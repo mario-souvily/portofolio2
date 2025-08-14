@@ -4,7 +4,7 @@ export const Parcours = [
     description:
       "Conception et implémentation d'une plateforme de benchmark produit ",
     stack: "Next.js, React, Tailwind CSS, TypeScript, Prisma, MySQL",
-    role: "Stagiaire Développeur web fullstack",
+    role: "Stagiaire Software Développeur",
     image: "/images/wiser.jpg",
     date: "2025-2025",
   },

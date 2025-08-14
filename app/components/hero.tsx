@@ -4,12 +4,12 @@ export const Hero = () => {
     <section className="flex max-md:flex-col items-start">
       <div className="flex-[3] w-full flex flex-col gap-2">
         <h2 className="font-caption text-5xl text-primary">Mario Souvily-Grieco</h2>
-        <h3 className="text-3xl font-caption">Développeur web Fullstack</h3>
+        <h3 className="text-3xl font-caption">Software Développeur</h3>
         <p className="mb-4 max-w-lg text-justify">
           Après plus de 20 ans d'expérience dans le domaine du commerce
           en tant que commercial et responsable de magasin,
           j'ai décidé de me reconvertir dans le développement web.
-          Aujourd'hui, je suis développeur web fullstack
+          Aujourd'hui, je suis software développeur
           passionné par la création d'applications web et web mobile.
         </p>
         <p className="mb-4 max-w-lg text-justify">
