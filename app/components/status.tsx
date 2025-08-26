@@ -9,9 +9,9 @@ import { SideProject } from "./projects/SideProject";
 export const Status = () => {
   return (
     <Section>
-      <div className="p-2 flex flex-col gap-4">
-        <p className="text-xl font-bold text-primary">Mes Stacks</p>
-        <div className="grid grid-cols-2 gap-4">
+      <div className="p-2 flex flex-col gap-4 items-center text-center">
+        <p className="text-4xl font-bold text-primary mb-4 mt-4">Mes Stacks</p>
+        <div className="grid grid-cols-2 gap-8 md:gap-x-20 md:gap-y-8 place-items-center">
           {Stacks.map((stack, index) => (
             <Stack
               key={index}
@@ -21,9 +21,9 @@ export const Status = () => {
           ))}
         </div>
       </div>
-      <div className="p-2 flex flex-col gap-4">
-        <p className="text-xl font-bold text-primary">Mes Projets</p>
-        <div className="flex flex-col gap-2">
+      <div className="p-2 flex flex-col gap-4 items-center text-center">
+        <p className="text-4xl font-bold text-primary mb-4">Mes Projets</p>
+        <div className="flex flex-col gap-2 items-center">
           {SideProjects.map((project, index) => (
             <SideProject
               key={index}
@@ -37,19 +37,21 @@ export const Status = () => {
         </div>
       </div>
 
-      <div className="p-2 flex flex-col">
-        <p className="text-xl font-bold text-primary">Mon Parcours</p>
-        {Parcours.map((parcours, index) => (
-          <Parcour
-            key={index}
-            title={parcours.title}
-            description={parcours.description}
-            image={parcours.image}
-            date={parcours.date}
-            role={parcours.role}
-            stack={parcours.stack}
-          />
-        ))}
+      <div className="p-2 flex flex-col items-center text-center">
+        <p className="text-4xl font-bold text-primary mb-4 mt-4">Mon Parcours</p>
+        <div className="flex flex-col items-center">
+          {Parcours.map((parcours, index) => (
+            <Parcour
+              key={index}
+              title={parcours.title}
+              description={parcours.description}
+              image={parcours.image}
+              date={parcours.date}
+              role={parcours.role}
+              stack={parcours.stack}
+            />
+          ))}
+        </div>
       </div>
     </Section>
   );

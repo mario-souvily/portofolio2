@@ -1,18 +1,18 @@
 
 export const Hero = () => {
   return (
-    <section className="flex max-md:flex-col items-start">
-      <div className="flex-[3] w-full flex flex-col gap-2">
+    <section className="w-full max-w-3xl mx-auto flex flex-col md:flex-row items-start gap-6">
+      <div className="flex-[3] w-full flex flex-col gap-2 items-start text-left">
         <h2 className="font-caption text-5xl text-primary">Mario Souvily-Grieco</h2>
         <h3 className="text-3xl font-caption">Software Développeur</h3>
-        <p className="mb-4 max-w-lg text-justify">
+        <p className="mb-4 max-w-lg text-left">
           Après plus de 20 ans d'expérience dans le domaine du commerce
           en tant que commercial et responsable de magasin,
           j'ai décidé de me reconvertir dans le développement web.
           Aujourd'hui, je suis software développeur
           passionné par la création d'applications web et web mobile.
         </p>
-        <p className="mb-4 max-w-lg text-justify">
+        <p className="mb-4 max-w-lg text-left">
           J'ai suivi une formation intensive de 9 mois
           en développement web fullstack chez O'clock.
           Par la suite, j'ai effectue un stage de 6 mois chez
@@ -27,7 +27,7 @@ export const Hero = () => {
       </div>
       <div className="flex-[2] flex justify-center md:justify-start">
         <img src="/images/image-moi.png"
-          className="w-full h-auto max-w-48 rounded-lg  md:mt-20"
+          className="w-full h-auto max-w-48 rounded-lg"
           alt="Photo de Mario"
         />
       </div>

@@ -17,13 +17,11 @@ export const SideProject = (props: SideProjectProps) => {
   if (!props.url) {
     return (
       <div
-        className="inline-flex items-center gap-4 hover:bg-accent hover:text-accent p-2 rounded-md cursor-pointer"
+        className="w-full max-w-3xl flex items-start gap-4 hover:bg-accent hover:text-accent p-4 rounded-md cursor-pointer"
         onClick={() => setShowMessage(!showMessage)}
       >
-        <span className="bg-accent text-accent-foreground">
-          <Image src={props.image} alt={props.title} width={45} height={45} />
-        </span>
-        <div>
+        <Image src={props.image} alt={props.title} width={56} height={56} className="object-contain shrink-0" />
+        <div className="text-left">
           <p className="text-lg font-semibold">{props.title}</p>
           <p className="text-md text-muted-foreground ">{props.description}</p>
           {props.stacks && (
@@ -47,12 +45,10 @@ export const SideProject = (props: SideProjectProps) => {
   return (
     <Link
       href={props.url}
-      className="inline-flex items-center gap-4 hover:bg-accent hover:text-accent p-2 rounded-md"
+      className="w-full max-w-3xl flex items-start gap-4 hover:bg-accent hover:text-accent p-4 rounded-md"
     >
-      <span className="bg-accent text-accent-foreground">
-        <Image src={props.image} alt={props.title} width={45} height={45} />
-      </span>
-      <div>
+      <Image src={props.image} alt={props.title} width={56} height={56} className="object-contain shrink-0" />
+      <div className="text-left">
         <p className="text-lg font-semibold">{props.title}</p>
         <p className="text-md text-muted-foreground ">{props.description}</p>
         {props.stacks && (

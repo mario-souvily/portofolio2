@@ -1,7 +1,7 @@
 export const Stacks = [
   {
-    name: "JavaScript",
-    image: "/images/javascript2.svg",
+    name: "Node.js",
+    image: "/images/logo-node.jpg",
   },
   {
     name: "React",
@@ -12,8 +12,8 @@ export const Stacks = [
     image: "/images/nextjs2.svg",
   },
   {
-    name: "Node.js",
-    image: "/images/logo-node.jpg",
+    name: "JavaScript",
+    image: "/images/javascript2.svg",
   },
   {
     name: "Express",
