@@ -25,10 +25,11 @@ export const Hero = () => {
           qui me permettra de faire cette formation.
         </p>
       </div>
-      <div className="flex-[2] flex justify-center md:justify-start">
+      <div className="px-5 mt-15">
         <img src="/images/image-moi.png"
-          className="w-full h-auto max-w-48 rounded-lg"
+          className="h-auto max-w-50 clip-circle"
           alt="Photo de Mario"
+
         />
       </div>
     </section>

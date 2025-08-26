@@ -163,3 +163,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--accent));
 }
+
+.clip-circle {
+  clip-path: circle(50%);
+}
