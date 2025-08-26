@@ -21,7 +21,7 @@ export const Hero = () => {
           métier de développeur web.
           Aujourd'hui, je souhaite poursuivre ma montée en compétences
           vers une nouvelle formation en tant que concepteur développeur d'applications.
-          je suis donc à la recherche d'une entreprise
+          Je suis donc à la recherche d'une entreprise
           qui me permettra de faire cette formation.
         </p>
       </div>
