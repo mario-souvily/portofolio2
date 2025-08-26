@@ -3,7 +3,14 @@ export const Parcours = [
     title: "Wiser Solution ",
     description:
       "Conception et implémentation d'une plateforme de benchmark produit ",
-    stack: "Next.js, React, Tailwind CSS, TypeScript, Prisma, MySQL",
+    stack: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "Prisma",
+      "MySQL",
+    ],
     role: "Stagiaire Software Développeur",
     image: "/images/wiser.jpg",
     date: "2025-2025",
@@ -11,8 +18,20 @@ export const Parcours = [
   {
     title: "O'clock Formation de développeur web fullstack",
     description: "Formation au titre de développeur web fullstack",
-    stack:
-      "JavaScript, html, css, React, TypeScript, Express, Nodejs, PostgreSQL, Sequelize, Docker, Git, Github ",
+    stack: [
+      "JavaScript",
+      "html",
+      "css",
+      "React",
+      "TypeScript",
+      "Express",
+      "Nodejs",
+      "PostgreSQL",
+      "Sequelize",
+      "Docker",
+      "Git",
+      "Github",
+    ],
     role: "Apprenant",
     image: "/images/oclock.jpg",
     date: "2024-2025",

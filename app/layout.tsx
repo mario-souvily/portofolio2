@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   other: {
     "theme-color": "#000000",
     "msapplication-TileColor": "#000000",
-    "apple-mobile-web-app-capable": "yes",
+    "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
     "apple-mobile-web-app-title": "Portfolio Mario",
     "application-name": "Portfolio Mario Souvily-grieco",
@@ -108,7 +108,7 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Portfolio Mario" />
         <link rel="apple-touch-icon" href="/images/image-moi.png" />
