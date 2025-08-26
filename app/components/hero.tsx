@@ -20,7 +20,7 @@ export const Hero = () => {
           où j'ai pu appliquer mes compétences et découvrir le
           métier de développeur web.
           Aujourd'hui, je souhaite poursuivre ma montée en compétences
-          vers une nouvelle formation en tant que concepteur développeur d'applications
+          vers une nouvelle formation en tant que concepteur développeur d'applications.
           je suis donc à la recherche d'une entreprise
           qui me permettra de faire cette formation.
         </p>
