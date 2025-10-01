@@ -14,7 +14,7 @@ Portfolio professionnel de Mario Souvily-Grieco, développeur web fullstack spé
 ## 📋 Prérequis
 
 - Node.js (version 18 ou supérieure)
-- npm ou yarn
+- npm
 
 ## 🛠️ Installation
 
@@ -28,20 +28,17 @@ Portfolio professionnel de Mario Souvily-Grieco, développeur web fullstack spé
 2. **Installer les dépendances**
    ```bash
    npm install
-   # ou
-   yarn install
    ```
 
 ## 🚀 Commandes disponibles
 
 ### Développement
 
-```bash
+````bash
 # Démarrer le serveur de développement
 npm run dev
 # ou
-yarn dev
-```
+
 
 Le site sera accessible sur [http://localhost:3000](http://localhost:3000)
 
@@ -50,65 +47,60 @@ Le site sera accessible sur [http://localhost:3000](http://localhost:3000)
 ```bash
 # Construire l'application pour la production
 npm run build
-# ou
-yarn build
+
 
 # Démarrer le serveur de production
 npm run start
-# ou
-yarn start
-```
+
 
 ### Qualité du code
 
 ```bash
 # Lancer le linter ESLint
 npm run lint
-# ou
-yarn lint
-```
+
 
 ### Export statique
 
 ```bash
 # Générer une version statique du site
 npm run export
-# ou
-yarn export
-```
+
 
 ## 📁 Structure du projet
 
-```
+````
+
 portofolio2/
 ├── app/
-│   ├── components/          # Composants React
-│   │   ├── career/         # Composant parcours professionnel
-│   │   ├── competance/     # Composant compétences/technologies
-│   │   ├── contact/        # Composant contact
-│   │   ├── projects/       # Composant projets
-│   │   ├── footer.tsx      # Pied de page
-│   │   ├── Header.tsx      # En-tête
-│   │   ├── hero.tsx        # Section principale
-│   │   ├── Section.tsx     # Wrapper de section
-│   │   └── status.tsx      # Section compétences/projets/parcours
-│   ├── data/               # Données statiques
-│   │   ├── career.ts       # Données parcours
-│   │   ├── contact.ts      # Données contact
-│   │   ├── projects.ts     # Données projets
-│   │   └── stacks.ts       # Données technologies
-│   ├── globals.css         # Styles globaux
-│   ├── layout.tsx          # Layout principal
-│   ├── page.tsx            # Page d'accueil
-│   └── sitemap.ts          # Configuration sitemap
+│ ├── components/ # Composants React
+│ │ ├── career/ # Composant parcours professionnel
+│ │ ├── competance/ # Composant compétences/technologies
+│ │ ├── contact/ # Composant contact
+│ │ ├── projects/ # Composant projets
+│ │ ├── footer.tsx # Pied de page
+│ │ ├── Header.tsx # En-tête
+│ │ ├── hero.tsx # Section principale
+│ │ ├── Section.tsx # Wrapper de section
+│ │ └── status.tsx # Section compétences/projets/parcours
+│ ├── data/ # Données statiques
+│ │ ├── career.ts # Données parcours
+│ │ ├── contact.ts # Données contact
+│ │ ├── projects.ts # Données projets
+│ │ └── stacks.ts # Données technologies
+│ ├── globals.css # Styles globaux
+│ ├── layout.tsx # Layout principal
+│ ├── page.tsx # Page d'accueil
+│ └── sitemap.ts # Configuration sitemap
 ├── components/
-│   └── ui/                 # Composants UI réutilisables
+│ └── ui/ # Composants UI réutilisables
 ├── lib/
-│   └── utils.ts            # Utilitaires
+│ └── utils.ts # Utilitaires
 ├── public/
-│   └── images/             # Images et assets
+│ └── images/ # Images et assets
 └── README.md
-```
+
+````
 
 ## 🎨 Personnalisation
 
@@ -131,10 +123,9 @@ portofolio2/
 
 ## 🌐 Déploiement
 
-### Vercel (recommandé)
+Deploiement fait avec Aws le build se fait automatiquement
 
-1. Connecter le repository à Vercel
-2. Le déploiement se fait automatiquement
+
 
 ### Netlify
 
@@ -157,42 +148,6 @@ portofolio2/
   - Définir les variables d'env (ex: `NEXT_PUBLIC_SITE_URL`)
   - Amplify gère automatiquement les routes Next 13+/app
 
-- **S3 + CloudFront (export statique)**
-
-  - Exporter en statique:
-    ```bash
-    npm run export
-    ```
-    Les fichiers statiques seront générés dans `out/`.
-  - Uploader le contenu de `out/` dans un bucket S3 public
-  - Créer une distribution CloudFront pointant sur le bucket S3
-  - Configurer l’index document sur `index.html`
-  - Note: uniquement adapté si toutes les pages sont statiques (pas de SSR nécessaire)
-
-- **EC2 / Elastic Beanstalk (Node.js)**
-
-  - Sur votre instance:
-
-    ```bash
-    # Installation
-    sudo apt update && sudo apt install -y nodejs npm
-    npm ci
-    npm run build
-
-    # Démarrage en service (avec PM2 recommandé)
-    npm install -g pm2
-    pm2 start "npm run start" --name portfolio
-    pm2 save
-    pm2 startup
-    ```
-
-  - Ouvrir le port 3000 dans le Security Group (ou mieux, mettre Nginx en reverse proxy sur 80/443)
-  - Pour Elastic Beanstalk: plateforme Node.js; commande de build `npm ci && npm run build` puis `npm run start`
-
-> Astuces:
->
-> - Si vous utilisez un domaine personnalisé, configurez Route 53 vers CloudFront/Load Balancer/Amplify.
-> - Pour HTTPS, utilisez ACM (Amazon Certificate Manager) avec CloudFront/ALB.
 
 ## 📱 Fonctionnalités
 
@@ -212,7 +167,7 @@ Créer un fichier `.env.local` si nécessaire:
 
 ```env
 NEXT_PUBLIC_SITE_URL=https://votre-domaine.com
-```
+````
 
 ### Configuration Tailwind
 
@@ -227,7 +182,3 @@ Le fichier `tailwind.config.js` contient la configuration des couleurs et des po
 ## 📄 Licence
 
 Ce projet est sous licence privée. Tous droits réservés.
-
----
-
-**Développé avec ❤️ par Mario Souvily-Grieco**
