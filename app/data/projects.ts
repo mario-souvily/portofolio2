@@ -15,14 +15,24 @@ export const SideProjects = [
       "PostgreSQL",
     ],
     url: "http://zombielandworld.surge.sh/",
+    gitHub: "https://github.com/mario-souvily/zombieland",
   },
   {
     image: "/images/Ocoffee.png",
     title: "O'coofee",
-    description:
-      "Site vitrine réalisé en automomie a mis parcours durant ma formation.",
-    stacks: ["JavaScript", "HTML", "CSS", "Express", "Node.js", "PostgreSQL"],
+    description: "Site vitrine qui à pour but de vendre des cafés.",
+    stacks: [
+      "JavaScript",
+      "HTML",
+      "Next.js",
+      "Tailwind",
+      "PostgreSQL",
+      "Prisma",
+      "Supabase",
+      "Clerk",
+    ],
     url: "",
+    gitHub: "https://github.com/mario-souvily/ocoofee",
   },
   {
     image: "/images/Pokedex.png",

@@ -1,66 +1,60 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 
 type SideProjectProps = {
   title: string;
   description: string;
-  url: string;
+  url?: string;
+  gitHub?: string;
   image: string;
   stacks?: string[];
 };
 
 export const SideProject = (props: SideProjectProps) => {
-  const [showMessage, setShowMessage] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
-  if (!props.url) {
-    return (
-      <div
-        className="w-full max-w-3xl flex items-start gap-4 hover:bg-accent hover:text-accent p-4 rounded-md cursor-pointer"
-        onClick={() => setShowMessage(!showMessage)}
-      >
-        <Image src={props.image} alt={props.title} width={56} height={56} className="object-contain shrink-0" />
-        <div className="text-left">
-          <p className="text-lg font-semibold">{props.title}</p>
-          <p className="text-md text-muted-foreground ">{props.description}</p>
-          {props.stacks && (
-            <div className="text-md text-muted-foreground flex flex-wrap gap-1">
-              {props.stacks.map((stack, index) => (
-                <span key={index} className="inline-block mr-2 text-sm bg-accent py-1 px-2 rounded-md">
-                  {stack}
-                </span>
-              ))}
-            </div>
+  const CardInner = (
+    <div className="group rounded overflow-hidden shadow-lg bg-accent flex flex-col h-full transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl hover:ring-1 hover:ring-primary/30">
+      <div className="overflow-hidden">
+        <img src={props.image} alt={props.title} className="w-full h-40 object-contain p-4 transition-transform duration-500 group-hover:scale-110 " />
+      </div>
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl text-primary">{props.title}</div>
+        <p className="text-base text-muted-foreground">{props.description}</p>
+      </div>
+      {props.stacks && props.stacks.length > 0 && (
+        <div className="px-6 pt-4 pb-2 flex flex-wrap gap-2 items-center justify-center">
+          {props.stacks.map((stack, index) => (
+            <span
+              key={index}
+              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 animate-pulse "
+            >
+              {stack}
+            </span>
+          ))}
+        </div>
+      )}
+      {showDetails && (
+        <div className="px-6 pb-4 mt-auto flex flex-col items-center justify-center gap-7">
+          {props.url ? (
+            <a href={props.url} target="_blank" rel="noreferrer" className="text-base text-primary underline">Voir le projet</a>
+          ) : (
+            <span className="text-base text-primary">Mise à jour en cours ...</span>
           )}
-          {showMessage && (
-            <p className="text-sm text-primary font-medium mt-2">Mise à jour en cours ...</p>
+          {props.gitHub && (
+            <a href={props.gitHub} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-base text-primary underline">
+              <img src="/images/github-1.svg" alt="GitHub" className="w-7 h-7" />
+              Voir le code source
+            </a>
           )}
         </div>
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 
-  // Si URL présente, afficher le lien normal
   return (
-    <Link
-      href={props.url}
-      className="w-full max-w-3xl flex items-start gap-4 hover:bg-accent hover:text-accent p-4 rounded-md"
-    >
-      <Image src={props.image} alt={props.title} width={56} height={56} className="object-contain shrink-0" />
-      <div className="text-left">
-        <p className="text-lg font-semibold">{props.title}</p>
-        <p className="text-md text-muted-foreground ">{props.description}</p>
-        {props.stacks && (
-          <div className="text-md text-muted-foreground flex flex-wrap gap-1">
-            {props.stacks.map((stack, index) => (
-              <span key={index} className="inline-block mr-2 text-sm bg-accent py-1 px-2 rounded-md">
-                {stack}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
-    </Link>
+    <div className="cursor-pointer h-full" onClick={() => setShowDetails(prev => !prev)}>
+      {CardInner}
+    </div>
   );
 };

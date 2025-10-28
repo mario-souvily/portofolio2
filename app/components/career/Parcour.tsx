@@ -23,7 +23,7 @@ export const Parcour = (props: ParcoursProps) => {
         {props.stack && (
           <div className="text-md text-muted-foreground flex flex-wrap gap-1">
             {props.stack.map((stack, index) => (
-              <span key={index} className="inline-block mr-2 text-sm bg-accent py-1 px-2 rounded-md">
+              <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                 {stack}
               </span>
             ))}
