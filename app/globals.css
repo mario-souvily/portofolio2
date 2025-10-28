@@ -167,3 +167,19 @@ body {
 .clip-circle {
   clip-path: circle(50%);
 }
+
+/* Définition de l'animation */
+@keyframes rotate-360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Classe qui déclenche l'animation a l ouverture de la page*/
+.animate-rotate-once {
+  display: inline-block;
+  animation: rotate-360 2s linear forwards;
+}
