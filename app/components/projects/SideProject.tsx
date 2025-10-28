@@ -16,18 +16,18 @@ export const SideProject = (props: SideProjectProps) => {
   const CardInner = (
     <div className="group rounded overflow-hidden shadow-lg bg-accent flex flex-col h-full transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl hover:ring-1 hover:ring-primary/30">
       <div className="overflow-hidden">
-        <img src={props.image} alt={props.title} className="w-full h-40 object-contain p-4 transition-transform duration-500 group-hover:scale-110 " />
+        <img src={props.image} alt={props.title} className="w-full h-40 object-contain p-4 transition-transform duration-500 group-hover:scale-120 " />
       </div>
-      <div className="px-6 py-4">
+      <div className="px-6 py-8 w-auto size-40 ">
         <div className="font-bold text-xl text-primary">{props.title}</div>
-        <p className="text-base text-muted-foreground">{props.description}</p>
+        <p className="text-base text-muted-foreground ">{props.description}</p>
       </div>
       {props.stacks && props.stacks.length > 0 && (
-        <div className="px-6 pt-4 pb-2 flex flex-wrap gap-2 items-center justify-center">
+        <div className="mb-4 px-6 pt-4 pb-2 flex flex-wrap gap-2 items-center justify-center">
           {props.stacks.map((stack, index) => (
             <span
               key={index}
-              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 animate-pulse "
+              className="inline-block bg-gray-200 rounded-full px-1 py-1 mb-1 text-sm font-semibold text-gray-700 animate-pulse "
             >
               {stack}
             </span>
