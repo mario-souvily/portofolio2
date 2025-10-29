@@ -1,5 +1,6 @@
 export const SideProjects = [
   {
+    id: "zombieland",
     image: "/images/zombieland.png",
     title: "Zombieland",
     description:
@@ -18,6 +19,7 @@ export const SideProjects = [
     gitHub: "https://github.com/mario-souvily/zombieland",
   },
   {
+    id: "ocoofee",
     image: "/images/Ocoffee.png",
     title: "O'coofee",
     description: "Site vitrine qui à pour but de vendre des cafés.",
@@ -35,6 +37,7 @@ export const SideProjects = [
     gitHub: "https://github.com/mario-souvily/ocoofee",
   },
   {
+    id: "pokedex",
     image: "/images/Pokedex.png",
     title: "Pokedex",
     description:
