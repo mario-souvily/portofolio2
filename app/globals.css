@@ -183,3 +183,44 @@ body {
   display: inline-block;
   animation: rotate-360 2s linear forwards;
 }
+@keyframes typing {
+  from {
+    width: 0;
+    visibility: hidden;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: white;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+    visibility: hidden;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+    visibility: hidden;
+  }
+  to {
+    width: 100%;
+  }
+}
+.animate-typing {
+  animation: typing 10s steps(100) infinite alternate;
+}
+/* .animate-blink {
+  animation: blink 0.7s infinite;
+} */

@@ -20,7 +20,7 @@ export const SideProject = (props: SideProjectProps) => {
       </div>
       <div className="px-6 py-8 w-auto size-40 ">
         <div className="font-bold text-xl text-primary">{props.title}</div>
-        <p className="text-base text-muted-foreground ">{props.description}</p>
+        <p className="text-base text-muted-foreground transition-colors duration-500 ">{props.description}</p>
       </div>
       {props.stacks && props.stacks.length > 0 && (
         <div className="mb-4 px-6 pt-4 pb-2 flex flex-wrap gap-2 items-center justify-center">

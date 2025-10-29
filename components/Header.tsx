@@ -5,9 +5,10 @@ export const Header = () => {
   return (
     <header className="sticky top-0 py-4 bg-background border-b border-border">
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <h1 className="text-lg font-bold text-primary">
+        <h1 className=" w-max max-w-xs text-lg font-bold text-primary animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-white">
           Portfolio de Mario Souvily-Grieco
         </h1>
+
         <div className="flex items-center gap-4">
           <Link
             href="https://github.com/mario-souvily"

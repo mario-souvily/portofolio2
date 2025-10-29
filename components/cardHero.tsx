@@ -14,7 +14,7 @@ export const CardHero = () => {
             Aujourd’hui, je construis des applis qui marchent <span className="text-primary"> (et qui ont du style) </span>.
           </p>
           <div className="mt-auto">
-            <span className="text-base text-primary underline">Cliquer ici si tu oses</span>
+            <span className="text-base text-primary underline">Clique ici si tu l'oses</span>
           </div>
         </div>
         <div className="flex-[2] flex justify-center md:justify-start p-6">
