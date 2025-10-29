@@ -1,26 +1,16 @@
 import { Parcours } from "@/app/data/career";
 import { SideProjects } from "@/app/data/projects";
-import { Stacks } from "@/app/data/stacks";
-import { Section } from "./Section";
 import { Parcour } from "./career/Parcour";
-import { Stack } from "./competance/Stack";
 import { SideProject } from "./projects/SideProject";
-
+import { Section } from "./Section";
+import { Stack } from "./Stack";
 export const Status = () => {
   return (
     <Section>
-      <div className="p-2 flex flex-col gap-4 items-center text-center">
-        <p className="text-4xl font-bold text-primary mb-4 mt-4">Mes Stacks</p>
-        <div className="grid grid-cols-2 gap-8 md:gap-x-20 md:gap-y-8 place-items-center">
-          {Stacks.map((stack, index) => (
-            <Stack
-              key={index}
-              name={stack.name}
-              image={stack.image}
-            />
-          ))}
-        </div>
-      </div>
+      <Stack />
+      {/* <div className="p-2 flex flex-col gap-4 items-center text-center">
+        <Stack />
+      </div> */}
       <div className="p-2 flex flex-col gap-4 items-center text-center w-full ">
         <p className="text-4xl font-bold text-primary mb-4">Mes Projets</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full items-stretch justify-items-stretch ">

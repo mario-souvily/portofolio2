@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/Header";
 
@@ -36,6 +38,9 @@ export default function Moi() {
                 qui font la différence.
               </p>
             </div>
+            <p className="mb-4 max-w-lg text-left">
+              <Link href="/" className="text-base text-primary underline">Tu veux sortir ? C'est par ici</Link></p>
+
           </div>
 
           <div className="flex-[2] flex justify-center md:justify-start">

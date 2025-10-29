@@ -26,6 +26,7 @@ export const CardHero = () => {
             alt="Photo de Mario"
           />
         </div>
+
       </div>
     </Link>
   );
