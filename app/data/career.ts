@@ -1,5 +1,6 @@
 export const Parcours = [
   {
+    id: "wiser",
     title: "Wiser Solution ",
     description:
       "Conception et implémentation d'une plateforme de benchmark produit ",
@@ -16,6 +17,7 @@ export const Parcours = [
     date: "2025-2025",
   },
   {
+    id: "oclock",
     title: "O'clock Formation de développeur web fullstack",
     description: "Formation au titre de développeur web fullstack",
     stack: [
@@ -37,6 +39,7 @@ export const Parcours = [
     date: "2024-2025",
   },
   {
+    id: "responsable",
     title: "Responsable de magasin et commercial",
     description: "Pret à porter, Immobilier, Restauration, Magasins",
     role: " Responsable",

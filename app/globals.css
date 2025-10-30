@@ -178,7 +178,7 @@ body {
   }
 }
 
-/* Classe qui déclenche l'animation a l ouverture de la page*/
+/* Classe qui déclenche l'animation du logo de la page d'accueil ouverture de la page*/
 .animate-rotate-once {
   display: inline-block;
   animation: rotate-360 2s linear forwards;
