@@ -1,39 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --background: 199 42% 9%;
-  --foreground: 197 32% 81%;
-  --muted: 199 12% 15%;
-  --muted-foreground: 199 12% 65%;
-  --popover: 199 42% 6%;
-  --popover-foreground: 197 32% 91%;
-  --card: 199 42% 7%;
-  --card-foreground: 197 32% 86%;
-  --border: 199 32% 14%;
-  --input: 199 32% 17%;
+  /* Couleurs personnalisées */
+  /* Couleur du fond */
+  --background: 160 10% 25%;
+  /* Couleur du texte  */
+  --foreground: 160 10% 90%;
+  /* Couleur du muted */
+  --muted: 160 10% 30%;
+  /* Couleur du texte */
+  --muted-foreground: 160 10% 85%;
+  /* Couleur du popover */
+  --popover: 190 10% 6%;
+  /* Couleur du texte */
+  --popover-foreground: 160 10% 90%;
+  /* Couleur du card */
+  --card: 160 15% 30%;
+  /* Couleur du texte */
+  --card-foreground: 160 10% 90%;
+  /* Couleur du border */
+  --border: 190 10% 14%;
+  /* Couleur de l'input */
+  --input: 190 10% 17%;
+  /* Couleur du primary */
   --primary: 175 59% 55%;
-  --primary-foreground: 175 59% 15%;
-  --secondary: 175 30% 25%;
-  --secondary-foreground: 175 30% 85%;
-  --accent: 199 42% 24%;
-  --accent-foreground: 199 42% 84%;
+  /* Couleur du texte */
+  --primary-foreground: 190 10% 15%;
+  /* Couleur du secondary */
+  --secondary: 190 10% 25%;
+  /* Couleur du texte */
+  --secondary-foreground: 190 10% 85%;
+  /* Couleur de l'accent */
+  --accent: 210 20% 45%;
+  /* Couleur du texte */
+  --accent-foreground: 210 20% 92%;
+  /* Couleur du destructive */
   --destructive: 0 94% 57%;
-  --destructive-foreground: 0 0% 100%;
+  /* Couleur du texte */
+  --destructive-foreground: 160 10% 90%;
+  /* Couleur du ring */
   --ring: 175 59% 55%;
+  /* Couleur du chart 1 */
   --chart-1: 175 59% 55%;
+  /* Couleur du chart 2 */
   --chart-2: 175 30% 25%;
-  --chart-3: 199 42% 24%;
+  /* Couleur du chart 3 */
+  --chart-3: 210 20% 45%;
+  /* Couleur du chart 4 */
   --chart-4: 175 30% 28%;
+  /* Couleur du chart 5 */
   --chart-5: 175 62% 55%;
+  /* Rayon des angles */
   --radius: 0.5rem;
 }
 
 * {
+  /* Couleur du border */
   border-color: hsl(var(--border));
 }
 
 body {
+  /* Couleur du fond */
   background-color: hsl(var(--background));
+  /* Couleur du texte */
   color: hsl(var(--foreground));
   font-family: var(--font-geist-sans), sans-serif;
 }
@@ -43,10 +72,12 @@ body {
   background-color: hsl(var(--background));
 }
 
+/* Couleur du card  */
 .bg-card {
-  background-color: hsl(var(--card));
+  background-color: oklch(90.8% 0.038 75.164 / 0.9);
 }
 
+/* Couleur du popover */
 .bg-popover {
   background-color: hsl(var(--popover));
 }
@@ -181,7 +212,7 @@ body {
 /* Classe qui déclenche l'animation du logo de la page d'accueil ouverture de la page*/
 .animate-rotate-once {
   display: inline-block;
-  animation: rotate-360 2s linear forwards;
+  animation: rotate-360 5s linear forwards;
 }
 @keyframes typing {
   from {
@@ -211,7 +242,7 @@ body {
 }
 @keyframes typing {
   from {
-    width: 0;
+    width: 0%;
     visibility: hidden;
   }
   to {
@@ -221,6 +252,3 @@ body {
 .animate-typing {
   animation: typing 10s steps(100) infinite alternate;
 }
-/* .animate-blink {
-  animation: blink 0.7s infinite;
-} */

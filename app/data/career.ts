@@ -15,10 +15,11 @@ export const Parcours = [
     role: "Stagiaire Software Développeur",
     image: "/images/wiser.jpg",
     date: "2025-2025",
+    bgColor: "bg-card",
   },
   {
     id: "oclock",
-    title: "O'clock Formation de développeur web fullstack",
+    title: "Ecole O'clock - DWWM",
     description: "Formation au titre de développeur web fullstack",
     stack: [
       "JavaScript",
@@ -37,6 +38,7 @@ export const Parcours = [
     role: "Apprenant",
     image: "/images/oclock.jpg",
     date: "2024-2025",
+    bgColor: "bg-card",
   },
   {
     id: "responsable",
@@ -45,5 +47,6 @@ export const Parcours = [
     role: " Responsable",
     image: "/images/responsable.png",
     date: "2003-2024",
+    bgColor: "bg-card",
   },
 ];

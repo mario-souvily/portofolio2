@@ -5,16 +5,16 @@ import Link from "next/link";
 export const CardHero = () => {
   return (
     <Link href="/Moi" className="block">
-      <div className="group rounded overflow-hidden shadow-lg bg-accent flex flex-col md:flex-row items-start gap-6 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl hover:ring-1 hover:ring-primary/30">
+      <div className="group rounded overflow-hidden shadow-lg bg-card flex flex-col md:flex-row items-start gap-6 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl hover:ring-1 hover:ring-primary/30">
         <div className="flex-[3] w-full flex flex-col gap-2 items-start text-left p-6">
-          <h2 className="font-caption text-5xl text-primary">Mario Souvily-Grieco</h2>
-          <h3 className="text-3xl font-caption">Développeur Web Fullstack</h3>
-          <p className="mb-4 max-w-lg text-left text-muted-foreground">
+          <h2 className="font-caption text-5xl text-yellow-800">Mario Souvily-Grieco</h2>
+          <h3 className="text-3xl font-caption text-black">Développeur Web Fullstack</h3>
+          <p className="mb-4 max-w-lg text-left text-black">
             20 ans dans le commerce, puis j’ai troqué la caisse contre VS Code 💻.
-            Aujourd’hui, je construis des applis qui marchent <span className="text-primary"> (et qui ont du style) </span>.
+            Aujourd’hui, je construis des applis qui marchent <span className="text-black"> (et qui ont du style) </span>.
           </p>
           <div className="mt-auto">
-            <span className="text-base text-primary underline">Clique ici si tu l'oses</span>
+            <span className="text-base text-black underline">Clique ici si tu l'oses</span>
           </div>
         </div>
         <div className="flex-[2] flex justify-center md:justify-start p-6">
