@@ -8,7 +8,7 @@ export default function Moi() {
   return (
     <>
       <Header />
-      <main className="container mx-auto px-4 py-8 flex flex-col items-center text-center">
+      <main className="container mx-auto px-4 py-8 flex flex-col items-center text-center flex-1">
         <section className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-start gap-8">
           <div className="flex-[3] w-full flex flex-col gap-4 items-start text-left">
             <h1 className="font-caption text-6xl text-primary">Mario Souvily-Grieco</h1>

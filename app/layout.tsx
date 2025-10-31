@@ -117,11 +117,13 @@ export default function RootLayout({
         className={cn(
           GeistSans.variable,
           AnekTelugu.variable,
-          "font-sans h-full bg-background text-foreground"
+          "font-sans h-full bg-background text-foreground flex flex-col"
         )}
         suppressHydrationWarning={true}
       >
-        {children}
+        <div className="flex-1 flex flex-col min-h-screen">
+          {children}
+        </div>
       </body>
     </html>
   );
