@@ -22,7 +22,8 @@ export const SideProjects = [
     id: "ocoofee",
     image: "/images/Ocoffee.png",
     title: "O'coofee",
-    description: "Site vitrine qui à pour but de vendre des cafés.",
+    description:
+      "J'ai voulu créer un site vitrine pour vendre des cafés en ligne. C'est un projet qui a pour but de me permettre d'apprendre à utiliser différents outils et technologies.",
     stacks: [
       "JavaScript",
       "HTML",
@@ -41,7 +42,7 @@ export const SideProjects = [
     image: "/images/Pokedex.png",
     title: "Pokedex",
     description:
-      "Site réalisé a mis parcours durant ma formation en utilisant l'api de pokémon.",
+      "Site réalisé a mis parcours durant ma formation chez O'clock en utilisant l'api de pokémon.Actuellement en cours de refonte.",
     stacks: ["JavaScript", "HTML", "CSS", "React", "Node.js", "Express"],
     url: "",
   },

@@ -11,7 +11,7 @@ export const Status = () => {
       <Stack />
 
       <div className="p-2 flex flex-col gap-4 items-center text-center w-full ">
-        <p className="text-4xl font-bold text-primary mb-4">Mes Projets</p>
+        <p className="text-3xl md:text-4xl font-bold text-primary mb-4">Mes Projets</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full items-stretch justify-items-stretch  ">
           {SideProjects.map((project, index) => (
             <SideProject
@@ -28,9 +28,9 @@ export const Status = () => {
         </div>
       </div>
 
-      <div className="p-2 flex flex-col gap-4 items-center text-center w-2/3">
-        <p className="text-4xl font-bold text-primary mb-4 mt-4">Mon Parcours</p>
-        <div className="flex flex-col sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full items-stretch justify-items-stretch">
+      <div className="p-2 flex flex-col gap-4 items-center text-center w-full">
+        <p className="text-3xl md:text-4xl font-bold text-primary mb-4 mt-4">Mon Parcours</p>
+        <div className="flex flex-col gap-5 w-full max-w-4xl items-stretch">
           {Parcours.map((parcours, index) => (
             <Parcour
               id={parcours.id}

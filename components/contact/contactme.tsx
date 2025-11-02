@@ -15,8 +15,8 @@ export const Contact = (props: ContactProps) => {
         <Image src={props.image} alt={props.title} width={45} height={45} />
       </span>
       <div className="flex flex-col gap-1">
-        <p className="text-lg font-semibold">{props.title}</p>
-        <Link href={props.url} className="text-sm text-muted-foreground hover:text-primary">
+        <p className="text-base md:text-lg font-semibold">{props.title}</p>
+        <Link href={props.url} className="text-xs md:text-sm text-muted-foreground hover:text-primary">
           {props.description}
         </Link>
       </div>
@@ -27,7 +27,7 @@ export const Contact = (props: ContactProps) => {
 export const Contactme = () => {
   return (
     <div className="p-2 flex flex-col gap-4">
-      <p className="text-xl font-bold text-primary mt-7 p-4">Contact</p>
+      <p className="text-lg md:text-xl font-bold text-primary mt-7 p-4">Contact</p>
       <div className="flex flex-col gap-4">
         <Contact
           title="Email"
