@@ -214,13 +214,14 @@ body {
   display: inline-block;
   animation: rotate-360 5s linear forwards;
 }
+
 @keyframes typing {
   from {
     width: 0;
     visibility: hidden;
   }
   to {
-    width: 100%;
+    width: 70%;
   }
 }
 @keyframes blink {
@@ -231,24 +232,7 @@ body {
     border-color: white;
   }
 }
-@keyframes typing {
-  from {
-    width: 0;
-    visibility: hidden;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0%;
-    visibility: hidden;
-  }
-  to {
-    width: 100%;
-  }
-}
+
 .animate-typing {
   animation: typing 10s steps(100) infinite alternate;
 }
