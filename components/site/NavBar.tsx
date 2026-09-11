@@ -16,9 +16,21 @@ export const NavBar = () => {
   return (
     <div className="relative flex justify-center pt-6 px-4">
       <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 md:gap-x-8 py-3 px-5 md:px-7 bg-white/80 border border-white rounded-full shadow-[0_10px_34px_rgba(60,90,30,0.1)]">
-        <Link href="/" className="flex items-center gap-2 font-bold text-[17px] text-[#24310f]">
-          <span className="w-3 h-3 rounded-full grad-vert inline-block"></span>
-          mario.dev
+        <Link
+          href="/"
+          aria-label="Retour à l'accueil"
+          title="Retour à l'accueil"
+          className="group flex items-center gap-2.5 font-bold text-[17px] text-[#24310f]"
+        >
+          <span
+            className="w-10 h-10 grad-vert text-white font-extrabold text-lg flex items-center justify-center shadow-[0_8px_20px_rgba(90,140,20,0.3)] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6"
+            style={{ borderRadius: "42% 58% 55% 45% / 48% 45% 55% 52%" }}
+          >
+            M
+          </span>
+          <span className="transition-colors group-hover:text-[#567d0e]">
+            mario<span className="gradtext">.dev</span>
+          </span>
         </Link>
         {links.map((link) => {
           const active =
