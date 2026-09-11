@@ -73,7 +73,7 @@ export const Hero = () => {
             {badges[badge]}
           </span>
         </button>
-        <div className="inline-flex items-center gap-2 text-[13px] font-semibold text-[#567d0e]">
+        <div className="inline-flex items-center gap-2 text-[13px] font-semibold text-[#567d0e] animate-bounce">
           <span className="cuedot"></span>
           Psst — clique sur la photo
         </div>
