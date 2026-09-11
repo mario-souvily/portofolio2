@@ -54,8 +54,12 @@
   --radius: 0.5rem;
 }
 
-* {
-  /* Couleur du border */
+/* Couleur de bordure par défaut de l'ancien thème.
+   Volontairement limitée aux éléments sans classe de couleur de bordure :
+   une règle sur `*` écraserait les utilitaires border-* de Tailwind v4
+   (les layers CSS passent après les règles globales). */
+.border-border,
+.border-b.border-border {
   border-color: hsl(var(--border));
 }
 
