@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { href: "/", label: "Accueil" },
+  { href: "/Moi", label: "Moi" },
   { href: "/jardin", label: "Mon jardin d'outils" },
   { href: "/chemin", label: "Mon chemin" },
 ];
