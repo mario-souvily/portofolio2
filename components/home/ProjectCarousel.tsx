@@ -22,7 +22,8 @@ export const ProjectCarousel = () => {
 
       <div className="relative h-[540px] md:h-[660px]">
         {SideProjects.map((project, i) => {
-          const off = i - idx;
+          /* Position en boucle : -1 (à gauche), 0 (au centre), +1 (à droite) */
+          const off = ((((i - idx) % total) + total + 1) % total) - 1;
           const active = off === 0;
           const href = project.url || project.gitHub;
           const hrefLabel = project.url ? "Visiter le site ↗" : "Voir le code ↗";
