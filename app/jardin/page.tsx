@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Jardin() {
   return (
-    <main className="page-organique font-outfit relative min-h-screen overflow-hidden flex-1">
+    <main className="page-organique font-outfit relative min-h-screen flex-1">
       <Blobs />
       <div className="relative max-w-[1440px] mx-auto">
         <NavBar />

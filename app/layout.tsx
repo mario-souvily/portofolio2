@@ -124,7 +124,7 @@ export default function RootLayout({
           GeistSans.variable,
           AnekTelugu.variable,
           OutfitFont.variable,
-          "font-sans h-full bg-background text-foreground flex flex-col"
+          "font-sans min-h-screen bg-background text-foreground flex flex-col"
         )}
         suppressHydrationWarning={true}
       >
