@@ -16,21 +16,23 @@ export const ProjectCarousel = () => {
         <h2 className="text-3xl md:text-5xl font-extrabold text-[#24310f]">Mes projets récents</h2>
         <div className="inline-flex items-center gap-2 text-sm font-semibold text-[#567d0e]">
           <span className="cuedot"></span>
-          Clique sur une carte ou essaie les flèches
+          Clique sur l&apos;image pour visiter le projet — flèches ou cartes pour naviguer
         </div>
       </div>
 
-      <div className="relative h-[520px] md:h-[640px]">
+      <div className="relative h-[540px] md:h-[660px]">
         {SideProjects.map((project, i) => {
           const off = i - idx;
           const active = off === 0;
+          const href = project.url || project.gitHub;
+          const hrefLabel = project.url ? "Visiter le site ↗" : "Voir le code ↗";
           return (
             <div
               key={project.id}
               onClick={() => !active && setIdx(i)}
               className="absolute left-1/2 top-0 w-[88vw] max-w-[660px]"
               style={{
-                transform: `translateX(calc(-50% + ${off * 80}%)) scale(${active ? 1 : 0.85})`,
+                transform: `translateX(calc(-50% + ${off * 92}%)) scale(${active ? 1 : 0.85})`,
                 opacity: active ? 1 : 0.55,
                 zIndex: active ? 3 : 1,
                 cursor: active ? "default" : "pointer",
@@ -38,13 +40,37 @@ export const ProjectCarousel = () => {
               }}
             >
               <div className="bg-white rounded-[28px] shadow-[0_30px_70px_rgba(60,90,30,0.16)] p-4">
-                <Image
-                  src={project.image}
-                  alt={`Aperçu du site ${project.title}`}
-                  width={880}
-                  height={556}
-                  className="w-full h-52 md:h-[340px] object-cover rounded-[18px]"
-                />
+                {active && href ? (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="group relative block overflow-hidden rounded-[18px]"
+                    aria-label={`${hrefLabel} — ${project.title}`}
+                  >
+                    <Image
+                      src={project.image}
+                      alt={`Aperçu du site ${project.title}`}
+                      width={880}
+                      height={556}
+                      className="w-full h-52 md:h-[340px] object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                    <span className="absolute inset-0 flex items-center justify-center bg-[#1c2413]/0 transition-colors duration-300 group-hover:bg-[#1c2413]/25">
+                      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-[#24310f] font-bold text-sm py-2.5 px-5 rounded-full shadow-[0_10px_26px_rgba(30,40,15,0.3)]">
+                        {hrefLabel}
+                      </span>
+                    </span>
+                  </a>
+                ) : (
+                  <Image
+                    src={project.image}
+                    alt={`Aperçu du site ${project.title}`}
+                    width={880}
+                    height={556}
+                    className="w-full h-52 md:h-[340px] object-cover rounded-[18px]"
+                  />
+                )}
                 <div className="pt-5 px-3 pb-3 flex flex-col gap-3 items-start">
                   <h3 className="text-2xl md:text-[27px] font-bold text-[#24310f]">{project.title}</h3>
                   <p className="text-[15px] leading-relaxed text-[#55613f] text-left">{project.description}</p>
@@ -62,16 +88,19 @@ export const ProjectCarousel = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-5 mt-1.5">
+                  <div className="flex flex-wrap gap-3 mt-1.5">
                     {project.url && (
                       <a
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-bold text-[#567d0e] hover:text-[#8aa312]"
                         onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-2 grad-vert text-white text-sm font-bold py-2.5 px-5 rounded-full shadow-[0_8px_20px_rgba(90,140,20,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(90,140,20,0.3)]"
                       >
-                        Voir le site →
+                        Voir le site
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M5 12 L19 12 M13 6 L19 12 L13 18"></path>
+                        </svg>
                       </a>
                     )}
                     {project.gitHub && (
@@ -79,11 +108,19 @@ export const ProjectCarousel = () => {
                         href={project.gitHub}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-bold text-[#567d0e] hover:text-[#8aa312]"
                         onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-2 bg-[#1c2413] text-[#eef8d8] text-sm font-bold py-2.5 px-5 rounded-full transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(30,40,15,0.3)]"
                       >
-                        GitHub →
+                        GitHub
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M5 12 L19 12 M13 6 L19 12 L13 18"></path>
+                        </svg>
                       </a>
+                    )}
+                    {!project.url && !project.gitHub && (
+                      <span className="inline-flex items-center bg-[#f4f9e8] text-[#567d0e] text-sm font-semibold py-2.5 px-5 rounded-full">
+                        Refonte en cours — bientôt en ligne
+                      </span>
                     )}
                   </div>
                 </div>
