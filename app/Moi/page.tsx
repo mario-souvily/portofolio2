@@ -17,7 +17,7 @@ export default function Moi() {
   return (
     <main className="page-organique font-outfit relative min-h-screen overflow-hidden flex-1">
       <Blobs />
-      <div className="relative">
+      <div className="relative max-w-[1440px] mx-auto">
         <NavBar />
         <section className="relative flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 px-6 md:px-20 py-14 md:py-20">
           <div className="flex-[1.3] flex flex-col gap-6 items-start">

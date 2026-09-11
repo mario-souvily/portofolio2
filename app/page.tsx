@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="page-organique font-outfit relative min-h-screen overflow-hidden flex-1">
       <Blobs />
-      <div className="relative">
+      <div className="relative max-w-[1440px] mx-auto">
         <NavBar />
         <Hero />
         <ProjectCarousel />
