@@ -89,7 +89,7 @@ export default function Moi() {
               }}
             ></div>
             <Image
-              src="/images/moi-1.png"
+              src="/images/moi-hero.png"
               alt="Portrait de Mario"
               width={380}
               height={380}
