@@ -1,12 +1,17 @@
 import { cn } from "@/lib/utils";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-import { Anek_Telugu } from "next/font/google";
+import { Anek_Telugu, Outfit } from "next/font/google";
 import "./globals.css";
 
 const AnekTelugu = Anek_Telugu({
   subsets: ["latin"],
   variable: "--font-caption",
+});
+
+const OutfitFont = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
 });
 
 export const metadata: Metadata = {
@@ -118,6 +123,7 @@ export default function RootLayout({
         className={cn(
           GeistSans.variable,
           AnekTelugu.variable,
+          OutfitFont.variable,
           "font-sans h-full bg-background text-foreground flex flex-col"
         )}
         suppressHydrationWarning={true}
